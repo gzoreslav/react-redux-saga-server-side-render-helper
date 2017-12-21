@@ -1,11 +1,12 @@
 {
   "name": "react-redux-saga-server-side-render-helper",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Helper for server-side rendering",
-  "main": "src/helper.js",
+  "main": "lib/helper.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepublish": "npm install"
+    "build": "webpack",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -35,5 +36,22 @@
     "react-router-dom": "^4.2.2",
     "redux": "^3.7.2",
     "redux-saga": "^0.16.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1"
+  },
+  "babel": {
+    "presets": [
+      "env",
+      "react",
+      "stage-2"
+    ]
   }
 }
