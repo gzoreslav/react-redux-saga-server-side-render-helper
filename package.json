@@ -2,7 +2,7 @@
   "name": "react-redux-saga-server-side-render-helper",
   "version": "1.0.0",
   "description": "Helper for server-side rendering",
-  "main": "index.js",
+  "main": "src/helper.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -14,12 +14,13 @@
     "react",
     "redux",
     "redux-saga",
-    "react-router",
-    "v4",
-    "server-side",
-    "rendering"
+    "react-router v4",
+    "server-side rendering"
   ],
-  "author": "Zoreslav Goral",
+  "author": {
+    "name": "Zoreslav Goral",
+    "email": "gzoreslav@gmail.com"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/gzoreslav/react-redux-saga-server-side-render-helper/issues"
