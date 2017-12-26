@@ -106,6 +106,7 @@ export function pageRender(config) {
             <html>
               <head>
                 <title>${config.getPageTitle(route)}</title>
+                <link href="main.css" rel="stylesheet">
               </head>
               <body>
                 <div id="root">${html}</div>

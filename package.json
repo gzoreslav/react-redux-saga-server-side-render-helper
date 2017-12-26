@@ -1,6 +1,6 @@
 {
   "name": "react-redux-saga-server-side-render-helper",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Helper for server-side rendering",
   "main": "lib/helper.js",
   "scripts": {
