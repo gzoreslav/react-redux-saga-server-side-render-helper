@@ -52,7 +52,7 @@ export function apiHandler(config)  {
         config.appData.routes.some(route => {
             const match = matchPath(req.url, route);
             if (match) {
-                selectedRoutes.push({route: route, match: match});
+                selectedRoutes.push({r: route, m: match});
             }
             return match;
         });
@@ -62,14 +62,14 @@ export function apiHandler(config)  {
         } else {
             let promises = [];
             selectedRoutes
-                .map(({route, match}) => {
-                    if (route.loadData) {
-                    promises.push(route.loadData(match));
-                }
-        });
+                .map(({r, m}) => {
+                    if (r.loadData) {
+                        promises.push(r.loadData(m));
+                    }
+                });
             Promise.all(promises).then(data => {
-                config.next(req, res, selectedRoutes[selectedRoutes.length - 1], data);
-        });
+                config.next(req, res, selectedRoutes[selectedRoutes.length - 1].r, data);
+            });
         }
     }
 }
