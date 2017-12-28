@@ -51,21 +51,21 @@ export function apiHandler(config)  {
 
         config.appData.routes.some(route => {
             const match = matchPath(req.url, route);
-        if (match) {
-            selectedRoutes.push(route);
-        }
-        return match;
-    });
+            if (match) {
+                selectedRoutes.push({route: route, match: match});
+            }
+            return match;
+        });
 
         if (!selectedRoutes.length) {
             config.next(req, res);
         } else {
             let promises = [];
             selectedRoutes
-                .map(route => {
-                if (route.loadData) {
-                promises.push(route.loadData());
-            }
+                .map(({route, match}) => {
+                    if (route.loadData) {
+                    promises.push(route.loadData(match));
+                }
         });
             Promise.all(promises).then(data => {
                 config.next(req, res, selectedRoutes[selectedRoutes.length - 1], data);
