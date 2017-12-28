@@ -106,7 +106,7 @@ export function pageRender(config) {
             <html>
               <head>
                 <title>${config.getPageTitle(route)}</title>
-                <link href="main.css" rel="stylesheet">
+                <link href="/main.css" rel="stylesheet">
               </head>
               <body>
                 <div id="root">${html}</div>
@@ -115,7 +115,7 @@ export function pageRender(config) {
                   // http://redux.js.org/docs/recipes/ServerRendering.html#security-considerations
                   window.__PRELOADED_STATE__ = ${JSON.stringify(preloadedState).replace(/</g, '\\u003c')}
                 </script>
-                <script src="client.bundle.js"></script>
+                <script src="/client.bundle.js"></script>
               </body>
             </html>
             `;
