@@ -1,11 +1,9 @@
-# react-redux-saga-server-side-render-helper
-Helper for server-side rendering
-
 # React Redux-Saga server-side rendering helper
 
-"Under the hood" for React server-side rendering. See usage example there - https://github.com/gzoreslav/react-redux-saga-universal-application
+*"Under the hood"* for React server-side rendering.
+See usage example there - https://github.com/gzoreslav/react-redux-saga-universal-application
 
-[![NPM package version](https://img.shields.io/npm/package-json/v/gzoreslav/react-redux-saga-server-side-render-helper.svg)]()
+[![NPM package version](https://img.shields.io/npmv/gzoreslav/react-redux-saga-server-side-render-helper.svg)]()
 [![Dependency Status](https://david-dm.org/gzoreslav/react-redux-saga-server-side-render-helper.svg)](https://david-dm.org/gzoreslav/react-redux-saga-server-side-render-helper)
 [![devDependencies Status](https://david-dm.org/gzoreslav/react-redux-saga-server-side-render-helper/dev-status.svg)](https://david-dm.org/gzoreslav/react-redux-saga-server-side-render-helper?type=dev)
 
