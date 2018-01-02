@@ -42,7 +42,7 @@ export function apiHandler(config)  {
                     config.next(req, res, selectedRoutes[selectedRoutes.length - 1].r, data);
                 })
                 .catch(ex => {
-                    config.next(req, res, selectedRoutes[selectedRoutes.length - 1].r, data);
+                    config.next(req, res, selectedRoutes[selectedRoutes.length - 1].r, ex);
                 })
         }
     }
