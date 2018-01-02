@@ -37,9 +37,13 @@ export function apiHandler(config)  {
                         promises.push(r.loadData(m));
                     }
                 });
-            Promise.all(promises).then(data => {
-                config.next(req, res, selectedRoutes[selectedRoutes.length - 1].r, data);
-            });
+            Promise.all(promises)
+                .then(data => {
+                    config.next(req, res, selectedRoutes[selectedRoutes.length - 1].r, data);
+                })
+                .catch(ex => {
+                    config.next(req, res, selectedRoutes[selectedRoutes.length - 1].r, data);
+                })
         }
     }
 }
