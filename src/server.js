@@ -67,7 +67,7 @@ export function reactRender(config) {
 
         const finalState = store.getState();
 
-        res.send(config.next(html, finalState, route));
+        res.send(config.next(html, finalState, route, data));
     }
 }
 
