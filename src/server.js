@@ -1,5 +1,4 @@
 import React from 'react';
-import { hydrate } from 'react-dom';
 import ReactDOMServer from 'react-dom/server';
 import { matchPath } from 'react-router-dom';
 import { Provider } from 'react-redux';
@@ -74,12 +73,12 @@ export function reactRender(config) {
 
 export function pageRender(config) {
 
-    return function(html, preloadedState, route) {
+    return function(html, preloadedState, route, data) {
         return `
             <!doctype html>
             <html>
               <head>
-                <title>${config.getPageTitle(route)}</title>
+                <title>${config.getPageTitle(route, data)}</title>
                 <link href="/main.css" rel="stylesheet">
               </head>
               <body>
